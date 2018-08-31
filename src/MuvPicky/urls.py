@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-
+from restaurants.views import HomeView
+from django.views.generic import TemplateView
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', HomeView.as_view()),
+    url(r'^About/$', TemplateView.as_view(template_name='About.html')),
+    url(r'^Contact/$', TemplateView.as_view(template_name='Contact.html')),
 ]

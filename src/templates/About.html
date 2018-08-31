@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block head_title %} About || {{ block.super }} {% endblock head_title %}
+{% block content %}
+<head>
+  <h1>About</h1>
+  <body>
+    <p>
+   This app is to note down favorite restaurants
+   {% include 'Snippets/Sidebar.html' %}
+    </p>
+  </body>
+</head>
+{% endblock content %}
